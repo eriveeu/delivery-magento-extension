@@ -1,0 +1,12 @@
+tr:has(#label_carrier_greentohome_greentohome) td {
+    background-color: #92d950;
+    color: white;
+    font-weight: bold;
+}
+
+tr:has(#label_carrier_greentohome_greentohome) #label_method_greentohome_greentohome {
+    background-image: url(../img/logo.svg);
+    background-repeat: no-repeat;
+    background-position: 10px 15px;
+    padding-left: 55px;
+}

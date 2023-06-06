@@ -1,0 +1,4 @@
+"Delivery Methods","Versandmethoden"
+"Restrict method to regions","Beschränke Liefermethode auf Regionen"
+"Maximum Package Weight","Maximales Paketgewicht"
+"Comma separated list of allowed zip regions and or zip codes (e.g.: 1,23,2500)","Komma getrennte Liste von erlaubten PLZ und/oder Regionen (z.B.: 1,23,2500)"

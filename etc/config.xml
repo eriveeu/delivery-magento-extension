@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+	<default>
+		<carriers>
+			<greentohome>
+				<model>EriveEu\GreenToHomeShipping\Model\Carrier\GreenToHome</model>
+				<active>0</active>
+                <environment>2</environment>
+                <tracking_url>https://www.greentohome.at/app/paket/</tracking_url>
+                <title>Umweltfreundliche Zustellung</title>
+				<name>GreenToHome</name>
+                <price>0.00</price>
+                <max_package_weight>1000</max_package_weight>
+                <sallowspecific>0</sallowspecific>
+                <showmethod>1</showmethod>
+			</greentohome>
+		</carriers>
+	</default>
+</config>
