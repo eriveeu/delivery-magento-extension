@@ -96,13 +96,17 @@ class ShipmentResourcePlugin
             $totalWeight += (float)$item->getWeight() * $item->getQty();
         }
 
-        $fullStreet = $shipment->getOrder()->getShippingAddress()->getStreet();
-        $fullStreet = implode(' ', $fullStreet); //implode multiple streen lines into one string
-        $fullStreet = explode(' ', $fullStreet); //explode words and numbers
         /** @var Address $address */
         $address = $this->_addressFactory->create();
-        $address->setStreetNumber(array_pop($fullStreet));
-        $address->setStreet(implode(' ', $fullStreet));
+        $fullStreet = $shipment->getOrder()->getShippingAddress()->getStreet();
+        $fullStreet = implode(' ', $fullStreet); //implode multiple streen lines into one string
+
+        preg_match('/^(.*?)(\d.*)$/', trim($fullStreet), $matches); //extract street number
+        if(count($matches) > 2) {
+            $fullStreet = trim($matches[1]);
+            $address->setStreetNumber($matches[2]);
+        }
+        $address->setStreet($fullStreet);
         $address->setCity($shipment->getOrder()->getShippingAddress()->getCity());
         $address->setZip($shipment->getOrder()->getShippingAddress()->getPostcode());
         $address->setCountry($shipment->getOrder()->getShippingAddress()->getCountryId());
@@ -199,3 +203,4 @@ class ShipmentResourcePlugin
     }
 
 }
+
