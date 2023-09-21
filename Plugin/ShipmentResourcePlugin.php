@@ -135,7 +135,8 @@ class ShipmentResourcePlugin
             if ($result instanceof CreatedParcel) {
 
                 if ($result->getSuccess() === false) {
-                    throw $this->_apiExceptionFactory->create(['message' => (string)$result->getMessage()]);
+                    $errorMsg = method_exists($result, 'getMessage') ? (string)$result->getMessage() : 'Unknown error as no getMessage method found';
+                    throw $this->_apiExceptionFactory->create(['message' => $errorMsg]);
                 }
 
                 $resolvedParcel = $result->getParcel();
