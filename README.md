@@ -1,4 +1,4 @@
-# GreenToHome Shipping Method
+# ERIVE.delivery Shipping Method
 
 ## Table of Contents
 
@@ -13,8 +13,8 @@
 
 ## Introduction
 
-This module adds a custom online shipping method named GreenToHome.
-The creation of a shipment in Magento automatically triggers the creation of a parcel with status announced in the GreenToHome Cokpit.
+This module adds a custom online shipping method named ERIVE.delivery.
+The creation of a shipment in Magento automatically triggers the creation of a parcel with status announced in the ERIVE.delivery Cockpit.
 The tracking url for the shipment is generated automatically.
 
 ## Requirements
@@ -45,13 +45,13 @@ Install using composer or manual installation.
 
 ## Configuration
 
-Configure the module under Stores > Configuration > Sales > Delivery Methods > GreenToHome
+Configure the module under Stores > Configuration > Sales > Delivery Methods > ERIVE.delivery
 
 Configuration fields not mentioned are self-explanatory or magento default.
 
-**API Key:** Request API Key from GreenToHome
+**API Key:** Request API Key from ERIVE.delivery
 
-**Enviroment:** GreenToHome offers Dev and Stage enviroments for testing purposes. Select production for live usage.
+**Enviroment:** ERIVE.delivery offers Dev and Stage enviroments for testing purposes. Select production for live usage.
 
 **Tracking URL:** Base URL for the tracking links of the shipments. The tracking number will be appended automatically to this URL.
 

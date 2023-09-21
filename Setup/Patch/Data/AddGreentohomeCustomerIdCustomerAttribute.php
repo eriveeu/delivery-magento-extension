@@ -75,7 +75,7 @@ class AddGreentohomeCustomerIdCustomerAttribute implements DataPatchInterface, P
                 'user_defined' => true,
                 'is_filterable_in_grid' => false,
                 'system' => false,
-                'label' => 'Greentohome Customer ID',
+                'label' => 'ERIVE.delivery Customer ID',
                 'source' => null,
                 'position' => 10,
                 'type' => 'varchar',

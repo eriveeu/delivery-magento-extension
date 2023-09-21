@@ -1,6 +1,6 @@
 {
     "name": "eriveeu/module-greentohomeshipping",
-    "description": "Adds GreenToHome shipping method",
+    "description": "Adds ERIVE.delivery shipping method",
     "type": "magento2-module",
     "license": "GPL-3.0",
     "authors": [
