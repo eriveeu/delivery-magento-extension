@@ -152,7 +152,7 @@ class ShipmentResourcePlugin
 
                 $this->_shipmentRepository->save($shipment);
 
-                if ($magentoCustomer?->getCustomAttribute(self::GREENTOHOME_CUSTOMER_ID)?->getValue() !== $resolvedParcel->getTo()->getId()) {
+                if (!is_null($magentoCustomer) && $magentoCustomer?->getCustomAttribute(self::GREENTOHOME_CUSTOMER_ID)?->getValue() !== $resolvedParcel->getTo()->getId()) {
                     $magentoCustomer->setCustomAttribute(self::GREENTOHOME_CUSTOMER_ID, $resolvedParcel->getTo()->getId());
                     try {
                         $this->_customerRepository->save($magentoCustomer);
