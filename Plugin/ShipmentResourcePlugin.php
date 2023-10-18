@@ -110,10 +110,11 @@ class ShipmentResourcePlugin
         $address->setCity($shipment->getOrder()->getShippingAddress()->getCity());
         $address->setZip($shipment->getOrder()->getShippingAddress()->getPostcode());
         $address->setCountry($shipment->getOrder()->getShippingAddress()->getCountryId());
+        $address->setComment($shipment->getOrder()->getShippingAddress()->getSuffix());
         /** @var Customer $customer */
         $customer = $this->_customerFactory->create();
         $customer->setAddress($address);
-        $customer->setName($shipment->getOrder()->getCustomerName());
+        $customer->setName($shipment->getOrder()->getShippingAddress()->getName());
         $customer->setEmail($shipment->getOrder()->getCustomerEmail());
         $customer->setPhone($shipment->getOrder()->getShippingAddress()->getTelephone());
 
